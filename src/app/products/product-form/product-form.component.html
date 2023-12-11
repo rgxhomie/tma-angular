@@ -1,0 +1,24 @@
+<div class="product__form">
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Product Name" [(ngModel)]="newProduct.name" required>
+
+        <label for="message">Description:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Product Description" [(ngModel)]="newProduct.description" required></textarea>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" placeholder="Price" [(ngModel)]="newProduct.price" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="Quantity" [(ngModel)]="newProduct.inStock" required>        
+    
+        <button
+            (click)="addProduct()"
+            class="button__success"
+        >Add product</button>
+        <button
+            (click)="navigateToProducts()"
+            class="button__danger"
+        >Back</button>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<button (click)="navigateToCreate()">Create Product!</button>
+<button (click)="navigateToTagMgmt()">Create Tag!</button>
+
+<div class="tag__nav">
+    <app-tag *ngFor="let tag of tags$ | async" [tag]="tag"></app-tag>
+</div>
+
+<ul>
+    <li 
+        *ngFor="let product of products$ | async" 
+        class="product"
+    >
+        <div class="product__item">
+            <div class="item__header">
+                <div class="delete__button" (click)="removeProduct(product.id)">X</div>
+                <div class="tags__container">
+                    <ul>
+                        <li *ngFor="let tag of product.tags">
+                            <app-tag [tag]="tag"></app-tag>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item__content" (click)="navigateTo(product)">
+                <h3>{{ product.name }}</h3>
+                <span>
+                    <b>{{ product.price }}$</b>
+                </span>
+            </div>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,11 @@
+<div class="detail__container">
+    <h2>{{ product.name }}</h2>
+    <span><b>{{ product.inStock }}</b> in stock</span><br>
+    <span>Price: {{ product.price }}$</span>
+    <p>{{ product.description }}</p>
+
+    <button
+            (click)="navigateToProducts()"
+            class="button__danger"
+    >Back</button>
+</div>

@@ -1,0 +1,80 @@
+ul {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+li {
+    list-style-type: none;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+}
+
+.item__content {
+    text-align: center;
+}
+
+.product:hover {
+    background-color: #dfdcdc;
+    border: 1px solid #9b9999;
+    cursor: pointer;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product span {
+    font-size: 1em;
+    color: #666;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+.item__header {
+    display: flex;
+    gap: 5px;
+}
+
+.delete__button {
+    background-color: red;
+    color: white;
+    width: fit-content;
+    min-width: 15px;
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tag__nav {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
